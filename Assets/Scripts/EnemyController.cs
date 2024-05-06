@@ -5,6 +5,9 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class EnemyController : MonoBehaviour
 {
+
+    public AudioClip hitClip;
+
     public float speed = 3.0f;
     public float changeTime = 3.0f;
     public bool vertical;
@@ -73,6 +76,7 @@ public class EnemyController : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
+            player.PlaySound(hitClip);
         }
     }
     public void Fix()

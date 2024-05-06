@@ -18,6 +18,7 @@ public class RubyController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    AudioSource audioSource;
 
     Vector2 lookDirection = new Vector2(1, 0);
 
@@ -30,6 +31,13 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         currentHealth = maxHealth;
+
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 
     private void Update()
@@ -98,6 +106,8 @@ public class RubyController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+
+
     }
     void Launch()
     {

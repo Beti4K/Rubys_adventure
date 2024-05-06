@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollectibleScript : MonoBehaviour
 {
+    public AudioClip collectedClip;
     private void OnTriggerEnter2D(Collider2D other)
     {
         RubyController controller = other.GetComponent<RubyController>();
@@ -14,6 +15,8 @@ public class CollectibleScript : MonoBehaviour
             {
                 controller.ChangeHealth(1);
                 Destroy(gameObject);
+
+                controller.PlaySound(collectedClip);
             }
         }
     }
