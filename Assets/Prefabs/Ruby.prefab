@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7420332450689857130}
   - component: {fileID: 7808849875831859862}
   - component: {fileID: 2492653072496976471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ruby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  projectilePrefab: {fileID: 4364508736127219328, guid: 9439bd88869829441a7d753c63d54a15, type: 3}
   maxHealth: 5
   timeInvincible: 2
 --- !u!50 &-7420332450689857130
