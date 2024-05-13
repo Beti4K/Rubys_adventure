@@ -84,5 +84,6 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rb2D.simulated = false;
         smokeEffect.Stop();
+        animator.SetTrigger("Fixed");
     }
 }
